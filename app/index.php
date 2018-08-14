@@ -11,8 +11,12 @@
 		header("location: login.php");
 	}
 
+	$numeWho = $_SESSION['username'];
+	
+
 	require_once('../mysqli_connect.php');
-	$query		= "SELECT format_id, nume, datap, headline, maintext, imglink, linkdescription, format FROM ads ORDER BY format_id DESC";
+//	$query		= "SELECT format_id, nume, datap, headline, maintext, imglink, linkdescription, format FROM ads ORDER BY format_id DESC";
+	$query		= "SELECT format_id, nume, datap, headline, maintext, imglink, linkdescription, format FROM ads WHERE nume= '$numeWho' ORDER BY format_id DESC";
 	$response	= @mysqli_query($dbc, $query);
 
 	$domain		= 'http://localhost/mocup3.0/app';
@@ -41,7 +45,7 @@
 				<div class="row">
 					<div class="col-12 text-right">
 						<?php  if (isset($_SESSION['username'])) : ?>
-							<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong> | <a href="index.php?logout='1'" style="color: red;">logout</a></p>
+							<p>Welcome <strong><?php echo $numeWho; ?></strong> | <a href="index.php?logout='1'" style="color: red;">logout</a></p>
 						<?php endif ?>
 					</div>
 				</div>
