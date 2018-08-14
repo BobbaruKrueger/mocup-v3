@@ -1,12 +1,19 @@
 <?php 
+	session_start();
 
-	require_once('../mysqli_connect.php');
+	require_once('mysqli_connect.php');
+
+	$numeWho = $_SESSION['username'];
 
 	$output = '';
 
 	if ( isset( $_POST['export_excel'] ) ) {
 
-		$sqlE = "SELECT * FROM links ORDER BY id ASC";
+		if ( $numeWho == 'admin' ) {
+			$sqlE = "SELECT * FROM ads ORDER BY format_id ASC";
+		} else {
+			$sqlE = "SELECT * FROM ads WHERE nume='$numeWho' ORDER BY format_id ASC";	
+		}
 		$result = @mysqli_query($dbc, $sqlE);
 
 		if ( mysqli_num_rows( $result ) > 0 ) {
@@ -29,7 +36,7 @@
 			
 			$output .= '<tr>';
 			$output .= '	<td>';
-			$output .=			$row['id'];
+			$output .=			$row['format_id'];
 			$output .= '	</td>';
 			$output .= '	<td>';
 			$output .=			$row['nume'];

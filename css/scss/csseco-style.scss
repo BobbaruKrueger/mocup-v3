@@ -86,6 +86,112 @@ div#site-wrapper {
 		}
 	}
 	
+	.action {
+		label {}
+	}
+	.result {
+		.formats {
+			display: none;
+			text-align: center;
+			h1 {
+				margin-bottom: 40px;
+			}
+			.wrapper {
+				border: 1px solid #000;
+				border-radius: 10px;
+				padding: 10px;
+				text-align: left;
+				p.mtext {
+					font-size: 14px;
+					line-height: normal;
+					margin-bottom: .5rem;
+				}
+				img {
+					max-height: 150px;
+					max-width: 100%;
+					width: 100%;
+				}
+				h3.headline {
+					font-size: 16px;
+				}
+				p.linkdesc {
+					color: rgba(0, 0, 0, .6);
+					font-size: 14px;
+					line-height: normal;
+					margin: 0;
+				}
+			}
+			
+		}
+		.FacebookFeed {
+			.wrapper {
+				margin: 0 auto;
+				max-width: 400px;
+				width: 100%;
+				.hl-ld {
+					max-width: 80%;
+					padding: 10px;
+				}
+			}
+		}
+		.FacebookRightColumn {
+			.wrapper {
+				margin: 0 auto;
+				max-width: 400px;
+				width: 100%;
+			}
+		}
+		.FacebookInstantArticles,
+		.AudienceNetworkNative {
+			.wrapper {
+				margin: 0 auto;
+				max-width: 400px;
+				width: 100%;
+				.hl-ld {
+					padding: 10px;
+				}
+			}
+		}
+		
+	}
+	#formW {
+		.toomuch {
+			background-color: red!important;
+			color: white;
+		}
+		.dis {
+			background-color: #e9ecef;
+			opacity: .6;
+		}
+	}
+	table {
+		td.edit {
+			padding-bottom: 24px;
+			padding-top: 24px;
+			position: relative;
+			div {
+				form {
+					display: flex;
+					margin-top: 5px;
+					max-width: 100%;
+					width: 100%;
+					input {
+						margin-right: 5px;
+						flex: 1;
+					}
+				}
+				a.aedit {
+					bottom: 0;
+					right: 0;
+					position: absolute;
+				}
+			}
+		}
+		button {
+			cursor: pointer;
+		}
+	}
+	
 }
 
 

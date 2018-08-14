@@ -31,10 +31,10 @@
 										<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<button type="submit" class="btn btn-primary" name="login_user">Register</button>
+										<button type="submit" class="btn btn-primary" name="login_user">Login</button>
 									</div>
 									<p>
-										Not yet a member? <a href="register.php">Sign up</a>
+										Dont have an account? <a href="register.php">Sign up</a>
 									</p>
 								</form>
 							</div>
